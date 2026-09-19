@@ -1278,7 +1278,7 @@ u64 opt_part_size = 0;
 
 int ScanOptPartSize ( ccp arg )
 {
-    return ScanSizeOptU64(&opt_part_size,arg,GiB,0,"part-size",
+    return ScanSizeOptU64(&opt_part_size,arg,1,0,"part-size",
 		0, WII_SECTOR_SIZE * (u64)WII_MAX_SECTORS,
 		WII_SECTOR_SIZE, 0, true ) != ERR_OK;
 }
