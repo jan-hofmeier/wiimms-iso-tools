@@ -4185,6 +4185,7 @@ enumError CheckOptions ( int argc, char ** argv, bool is_env )
 	case GO_ALIGN_PART:	err += ScanOptAlignPart(optarg); break;
 	case GO_ALIGN_FILES:	opt_align_files = true; break;
 	case GO_DISC_SIZE:	err += ScanOptDiscSize(optarg); break;
+	case GO_PART_SIZE:	err += ScanOptPartSize(optarg); break;
 	case GO_OVERLAY:	break;
 	case GO_PATCH_FILE:	opt_patch_file = optarg; break;
 	case GO_DEST:		SetDest(optarg,false); break;

@@ -827,6 +827,7 @@ enumError cmd_test_options()
     print_val( "align #3:",	opt_align3, 0 );
     print_val( "align-part:",	opt_align_part, 0 );
     print_val( "disc-size:",	opt_disc_size, 0 );
+    print_val( "part-size:",	opt_part_size, 0 );
     printf("  partition selector:\n");
     wd_print_select(stdout,6,&part_selector);
 

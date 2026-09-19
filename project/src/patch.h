@@ -295,6 +295,10 @@ extern u64 opt_disc_size;
 
 int ScanOptDiscSize ( ccp arg );
 
+extern u64 opt_part_size;
+
+int ScanOptPartSize ( ccp arg );
+
 //-----------------------------------------------------------------------------
 
 extern StringField_t add_file;
