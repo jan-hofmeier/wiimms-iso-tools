@@ -992,6 +992,10 @@
 		"size",
 		"Define a minimal (virtual) ISO disc size." },
 
+  { T_OPT_CP,	"PART_SIZE",	"part-size|partsize",
+		"size",
+		"Force a minimal size for the data partition when repacking a game." },
+
   { T_OPT_CO,	"PREALLOC",	"prealloc",
 		"[=mode]",
 		"This option enables or disables the disc space preallocation."
@@ -1617,6 +1621,7 @@
   { T_COPT,	"SPLIT",	0,0,0 },
   { T_COPT,	"SPLIT_SIZE",	0,0,0 },
   { T_COPT,	"DISC_SIZE",	0,0,0 },
+  { T_COPT,	"PART_SIZE",	0,0,0 },
   { T_COPT,	"PREALLOC",	0,0,0 },
   { T_COPT,	"TRUNC",	0,0,0 },
   { T_COPT,	"CHUNK_MODE",	0,0,0 },

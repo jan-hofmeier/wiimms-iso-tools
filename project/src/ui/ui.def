@@ -771,6 +771,10 @@
 	"size", \
 	"Define a minimal (virtual) ISO disc size." )
 
+#:def_opt( "PART_SIZE", "part-size|partsize", "CP", \
+	"size", \
+	"Force a minimal size for the data partition when repacking a game." )
+
 #:def_opt( "PREALLOC", "prealloc", "CO", \
 	"[=mode]", \
 	"This option enables or disables the disc space preallocation. If" \
@@ -4286,6 +4290,10 @@
 	"", \
 	"" )
 
+#:def_cmd_opt( "COPY", "PART_SIZE", \
+	"", \
+	"" )
+
 #:def_cmd_opt( "COPY", "TRUNC", \
 	"", \
 	"" )
@@ -4583,6 +4591,10 @@
 	"" )
 
 #:def_cmd_opt( "CONVERT", "DISC_SIZE", \
+	"", \
+	"" )
+
+#:def_cmd_opt( "CONVERT", "PART_SIZE", \
 	"", \
 	"" )
 
@@ -5596,6 +5608,10 @@
 	"" )
 
 #:def_cmd_opt( "MIX", "DISC_SIZE", \
+	"", \
+	"" )
+
+#:def_cmd_opt( "MIX", "PART_SIZE", \
 	"", \
 	"" )
 

@@ -4283,8 +4283,19 @@ u64 GenPartFST
     wd_part_control_t *pc = MALLOC(sizeof(wd_part_control_t));
     part->pc = pc;
 
-    if (clear_part_control(pc, WII_TMD_GOOD_SIZE, cert_size,
-					(u64)blocks*WII_SECTOR_SIZE) )
+    u64 part_data_size = (u64)blocks * WII_SECTOR_SIZE;
+    if ( part->part_type == WD_PART_DATA && opt_part_size )
+    {
+	if ( opt_part_size < part_data_size )
+	{
+	    return ERROR0(ERR_INVALID_DATA,
+		"Requested --part-size (%llu) is smaller than required data size (%llu)!\n",
+		opt_part_size, part_data_size );
+	}
+	part_data_size = opt_part_size;
+    }
+
+    if (clear_part_control(pc, WII_TMD_GOOD_SIZE, cert_size, part_data_size) )
 	return ERROR0(ERR_INVALID_FILE,"Content of file 'cert.bin' wrong!\n");
 
 

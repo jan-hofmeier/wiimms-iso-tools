@@ -117,6 +117,7 @@ typedef enum enumOptions
 	OPT_SPLIT,
 	OPT_SPLIT_SIZE,
 	OPT_DISC_SIZE,
+	OPT_PART_SIZE,
 	OPT_PREALLOC,
 	OPT_TRUNC,
 	OPT_CHUNK_MODE,
@@ -163,7 +164,7 @@ typedef enum enumOptions
 	OPT_FILE_LIMIT,
 	OPT_PATCH_FILE,
 
-	OPT__N_SPECIFIC, // == 107
+	OPT__N_SPECIFIC, // == 108
 
 	//----- global options -----
 
@@ -208,7 +209,7 @@ typedef enum enumOptions
 	OPT_AVAR,
 	OPT_CASE,
 
-	OPT__N_TOTAL // == 147
+	OPT__N_TOTAL // == 148
 
 } enumOptions;
 
@@ -284,6 +285,7 @@ typedef enum enumOptions
 //	OB_SPLIT		= 1llu << OPT_SPLIT,
 //	OB_SPLIT_SIZE		= 1llu << OPT_SPLIT_SIZE,
 //	OB_DISC_SIZE		= 1llu << OPT_DISC_SIZE,
+//	OB_PART_SIZE		= 1llu << OPT_PART_SIZE,
 //	OB_PREALLOC		= 1llu << OPT_PREALLOC,
 //	OB_TRUNC		= 1llu << OPT_TRUNC,
 //	OB_CHUNK_MODE		= 1llu << OPT_CHUNK_MODE,
@@ -438,6 +440,7 @@ typedef enum enumOptions
 //				| OB_SPLIT
 //				| OB_SPLIT_SIZE
 //				| OB_DISC_SIZE
+//				| OB_PART_SIZE
 //				| OB_PREALLOC
 //				| OB_TRUNC
 //				| OB_CHUNK_MODE
@@ -898,6 +901,7 @@ typedef enum enumGetOpt
 	GO_AUTO_SPLIT,
 	GO_NO_SPLIT,
 	GO_DISC_SIZE,
+	GO_PART_SIZE,
 	GO_PREALLOC,
 	GO_TRUNC,
 	GO_CHUNK_MODE,
